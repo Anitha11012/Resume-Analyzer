@@ -21,7 +21,9 @@ mongoose
     console.log("Mongo Connected");
   });
 
-app.listen(5002, () => {
+const PORT = process.env.PORT || 5002;
+
+app.listen(PORT, () => {
   console.log(
     "Resume Service Running on 5002"
   );
