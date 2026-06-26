@@ -32,9 +32,9 @@ app.use(
   })
 );
 
+const PORT = process.env.PORT || 5000;
 
-
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log(
     "API Gateway running on 5000"
   );
