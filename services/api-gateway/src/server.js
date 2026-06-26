@@ -12,7 +12,7 @@ app.use(cors());
 app.use(
   "/api/resume",
   createProxyMiddleware({
-    target:"https://resume-analyzer-resume-service.onrender.com"
+    target:"https://resume-analyzer-resume-service.onrender.com",
     changeOrigin: true,
     pathRewrite: {
       "^/api/resume": "/api/resume",
@@ -23,7 +23,7 @@ app.use(
 app.use(
   "/api/analysis",
   createProxyMiddleware({
-    target:"https://resume-analyzer-2-g0je.onrender.com"
+    target:"https://resume-analyzer-2-g0je.onrender.com",
     changeOrigin: true,
     pathRewrite: {
       "^/api/analysis": "/api/analysis",
