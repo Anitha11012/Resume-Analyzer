@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 import {
   useNavigate,
 } from "react-router-dom";
@@ -22,7 +22,7 @@ const navigate =
     formData.append("userId", "demo");
 
     const response = await axios.post(
-      "https://resume-analyzer-api-gateway.onrender.com/api/resume/upload",
+      "/resume/upload",
       formData
     );
 
