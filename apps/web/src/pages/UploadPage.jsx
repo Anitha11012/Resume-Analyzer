@@ -22,7 +22,7 @@ const navigate =
     formData.append("userId", "demo");
 
     const response = await axios.post(
-      "http://localhost:5002/api/resume/upload",
+      "https://resume-analyzer-resume-service.onrender.com/api/resume/upload",
       formData
     );
 
