@@ -14,9 +14,6 @@ app.use(
   createProxyMiddleware({
     target:"https://resume-analyzer-resume-service.onrender.com",
     changeOrigin: true,
-    pathRewrite: {
-      "^/api/resume": "/api/resume",
-    },
   })
 );
 
@@ -25,10 +22,6 @@ app.use(
   createProxyMiddleware({
     target:"https://resume-analyzer-2-g0je.onrender.com",
     changeOrigin: true,
-    pathRewrite: {
-      "^/api/analysis": "/api/analysis",
-    },
-
   })
 );
 
