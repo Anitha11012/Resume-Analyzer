@@ -12,7 +12,7 @@ function Dashboard() {
 
       const response =
         await axios.post(
-          `http://localhost:5003/api/analysis/${resumeId}`
+          `https://resume-analyzer-2-g0je.onrender.com/api/analysis/${resumeId}`
         );
         localStorage.setItem(
   "analysisId",
