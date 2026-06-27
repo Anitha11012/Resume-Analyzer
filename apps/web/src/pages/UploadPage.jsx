@@ -21,7 +21,7 @@ const navigate =
     formData.append("resume", file);
     formData.append("userId", "demo");
 
-    const response = await axios.post(
+    const response = await api.post(
       "/resume/upload",
       formData
     );
