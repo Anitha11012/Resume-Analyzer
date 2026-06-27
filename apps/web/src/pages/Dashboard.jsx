@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../services/api";
 import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
@@ -11,8 +11,8 @@ function Dashboard() {
     try {
 
       const response =
-        await axios.post(
-          `https://resume-analyzer-2-g0je.onrender.com/api/analysis/${resumeId}`
+        await api.post(
+          `/analysis/${resumeId}`
         );
         localStorage.setItem(
   "analysisId",
