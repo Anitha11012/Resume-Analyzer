@@ -19,7 +19,7 @@ function AnalysisPage() {
 
       const response =
         await axios.get(
-          `http://localhost:5003/api/analysis/${resumeId}`
+          `https://resume-analyzer-2-g0je.onrender.com/api/analysis/${resumeId}`
         );
 
       setAnalysis(response.data);
