@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 
 function AnalysisPage() {
   const [analysis, setAnalysis] =
@@ -18,8 +18,8 @@ function AnalysisPage() {
         localStorage.getItem("resumeId");
 
       const response =
-        await axios.get(
-          `https://resume-analyzer-2-g0je.onrender.com/api/analysis/${resumeId}`
+        await api.get(
+          `/analysis/${resumeId}`
         );
 
       setAnalysis(response.data);
