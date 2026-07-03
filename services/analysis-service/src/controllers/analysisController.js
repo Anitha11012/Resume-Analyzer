@@ -28,7 +28,7 @@ const analyzeResume = async (
     // Fetch resume
     const response =
       await axios.get(
-        `http://localhost:5002/api/resume/${resumeId}`
+        `https://resume-analyzer-resume-service.onrender.com/api/resume/${resumeId}`
       );
 
     const resume =
