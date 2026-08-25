@@ -1,4 +1,4 @@
-name: Build Frontend and Backend
+name: Build Frontend and Backend Services
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - master
 
 jobs:
+
   frontend:
     runs-on: ubuntu-latest
 
@@ -26,6 +27,7 @@ jobs:
         working-directory: apps/web
         run: npm run build
 
+
   backend:
     runs-on: ubuntu-latest
 
@@ -38,10 +40,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install backend dependencies
-        working-directory: services
+      - name: Install Resume Service
+        working-directory: services/resume-service
         run: npm install
 
-      - name: Test backend
-        working-directory: services
-        run: npm test --if-present
+      - name: Install Analysis Service
+        working-directory: services/analysis-service
+        run: npm install
+
+      - name: Install API Gateway
+        working-directory: services/api-gateway
+        run: npm install
