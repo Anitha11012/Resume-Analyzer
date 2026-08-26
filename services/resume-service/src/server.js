@@ -28,3 +28,9 @@ app.listen(PORT, () => {
     `Resume Service Running on ${PORT}`
   );
 });
+
+app.get("/health", (req, res) => {
+  res.json({
+    status: "gateway-ok",
+  });
+});
