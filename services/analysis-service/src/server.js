@@ -28,3 +28,9 @@ app.listen(process.env.PORT, () => {
     `Analysis Service running on ${process.env.PORT}`
   );
 });
+
+app.get("/health", (req, res) => {
+  res.json({
+    status: "gateway-ok",
+  });
+});
