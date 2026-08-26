@@ -1,5 +1,7 @@
 const axios = require("axios");
 
+const RESUME_SERVICE_URL = process.env.RESUME_SERVICE_URL;
+
 const Analysis = require("../models/Analysis");
 
 const analyzeResumeWithAI =
