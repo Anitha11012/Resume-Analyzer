@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://resume-analyzer-api-gateway.onrender.com/api",
+  baseURL: "https://api-gateway-hseefbanhhdeh8ba.indiasouthcentral-01.azurewebsites.net/api",
 });
