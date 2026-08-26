@@ -28,7 +28,7 @@ const analyzeResume = async (
     // Fetch resume
     const response =
       await axios.get(
-        `https://resume-service-dfbrf0gna6fkeyfq.indiasouthcentral-01.azurewebsites.net/api/resume/${resumeId}`
+        `${RESUME_SERVICE_URL}/api/resume/${resumeId}`
       );
 
     const resume =
@@ -108,7 +108,7 @@ const matchResume = async (
 
     const response =
       await axios.get(
-        `https://resume-service-dfbrf0gna6fkeyfq.indiasouthcentral-01.azurewebsites.net/api/resume/${resumeId}`
+        `${RESUME_SERVICE_URL}/api/resume/${resumeId}`
       );
 
     const resume =
