@@ -9,10 +9,13 @@ const app = express();
 
 app.use(cors());
 
+const RESUME_SERVICE_URL = process.env.RESUME_SERVICE_URL;
+const ANALYSIS_SERVICE_URL = process.env.ANALYSIS_SERVICE_URL;
+
 app.use(
   "/api/resume",
   createProxyMiddleware({
-    target:`"${RESUME_SERVICE_URL}"`,
+    target:RESUME_SERVICE_URL,
     changeOrigin: true,
     pathRewrite: (path, req) => {
       console.log("[Gateway] Proxy path:", path);
@@ -25,7 +28,7 @@ app.use(
 app.use(
   "/api/analysis",
   createProxyMiddleware({
-    target:`"${ANALYSIS_SERVICE_URL}"`,
+    target:ANALYSIS_SERVICE_URL,
     changeOrigin: true,
     pathRewrite: (path, req) => {
       console.log("[Gateway] Proxy path:", path);
