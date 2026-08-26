@@ -12,7 +12,7 @@ app.use(cors());
 app.use(
   "/api/resume",
   createProxyMiddleware({
-    target:"https://resume-service-dfbrf0gna6fkeyfq.indiasouthcentral-01.azurewebsites.net",
+    target:`"${RESUME_SERVICE_URL}"`,
     changeOrigin: true,
     pathRewrite: (path, req) => {
       console.log("[Gateway] Proxy path:", path);
@@ -25,7 +25,7 @@ app.use(
 app.use(
   "/api/analysis",
   createProxyMiddleware({
-    target:"https://analysis-service-c5gkheb6c9d9h6ga.indiasouthcentral-01.azurewebsites.net",
+    target:`"${ANALYSIS_SERVICE_URL}"`,
     changeOrigin: true,
     pathRewrite: (path, req) => {
       console.log("[Gateway] Proxy path:", path);
